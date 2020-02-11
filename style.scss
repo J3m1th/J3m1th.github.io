@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 120px);
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    // background-color: #fafafa;
+    background-color: #1e1e1e;
+    color: #02F093;
+}
+
+a {
+    text-decoration: none;
+    // color: #000;
+    color: #02F093;
+    font-weight: 700;
+    transition: color .5s ease;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    &::selection {
+        color: #fff;
+        background: #5a2abd;
+    }
+}
+
+.intro {
+    margin-bottom: 60px;
+    text-align: center;
+    &__greeting {
+        margin-bottom: 30px;
+        font-size: 2.3rem;
+    }
+    &__caption {
+        margin-bottom: 20px;
+    }
+    &__highlight {
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+        &_red {
+            background-color: #8b0000;
+            color: #fff;
+            transition: background-color .5s ease;
+            &:hover {
+                background-color: #ff0000;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.contacts {
+    margin-left: auto;
+    &__avatar {
+        display: inline-block;
+        vertical-align: middle;
+        width: 70px;
+        height: auto;
+        margin-right: 15px;
+        border-radius: 50%;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    &__text {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.2rem;
+        span {
+            display: inline-block;
+            width: calc(100% - 271px);
+            color: #fff;
+        }
+    }
+    &__skype {
+        margin-bottom: 8px;
+    }
+    &__skype-link {
+        margin-left: 15px;
+        &:hover {
+            color: #276afc;
+        }
+    }
+    &__email-link {
+        margin-left: 15px;
+        &:hover {
+            color: #276afc;
+        }
+    }
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 650px) {}
+
+@media only screen and (max-width: 400px) {}
+
+@media only screen and (max-width: 350px) {}
