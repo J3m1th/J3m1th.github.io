@@ -16,18 +16,17 @@ body {
     width: calc(100% - 120px);
     height: 100vh;
     margin: 0 auto;
+    overflow: hidden;
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
-    // background-color: #fafafa;
     background-color: #1e1e1e;
     color: #02F093;
 }
 
 a {
     text-decoration: none;
-    // color: #000;
     color: #02F093;
     font-weight: 700;
     transition: color .5s ease;
@@ -79,9 +78,6 @@ a {
         height: auto;
         margin-right: 15px;
         border-radius: 50%;
-        &:hover {
-            transform: scale(1.05);
-        }
     }
     &__text {
         display: inline-block;
@@ -117,6 +113,6 @@ a {
 
 @media only screen and (max-width: 650px) {}
 
-@media only screen and (max-width: 400px) {}
+@media only screen and (max-width: 450px) {}
 
 @media only screen and (max-width: 350px) {}
