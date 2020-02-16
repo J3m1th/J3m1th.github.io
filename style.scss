@@ -1,118 +1,184 @@
-html {
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100% - 120px);
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    background-color: #1e1e1e;
-    color: #02F093;
-}
-
-a {
-    text-decoration: none;
-    color: #02F093;
-    font-weight: 700;
-    transition: color .5s ease;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    &::selection {
-        color: #fff;
-        background: #5a2abd;
+    html {
+        box-sizing: border-box;
+        font-size: 16px;
     }
-}
-
-.intro {
-    margin-bottom: 60px;
-    text-align: center;
-    &__greeting {
-        margin-bottom: 30px;
-        font-size: 2.3rem;
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
     }
-    &__caption {
-        margin-bottom: 20px;
+    
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 120px);
+        max-width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2rem;
+        background-color: #1e1e1e;
+        color: #02F093;
     }
-    &__highlight {
-        padding-left: 5px;
-        padding-right: 5px;
-        background-color: #333;
-        color: #fff;
-        border-radius: 5px;
-        &_red {
-            background-color: #8b0000;
+    
+    a {
+        text-decoration: none;
+        color: #02F093;
+        font-weight: 700;
+        transition: color .5s ease;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        &::selection {
             color: #fff;
-            transition: background-color .5s ease;
-            &:hover {
-                background-color: #ff0000;
-                cursor: pointer;
+            background: #5a2abd;
+        }
+    }
+    
+    .intro {
+        margin-bottom: 60px;
+        text-align: center;
+        &__greeting {
+            margin-bottom: 30px;
+            font-size: 2.3rem;
+        }
+        &__caption {
+            margin-bottom: 20px;
+        }
+        &__highlight {
+            padding-left: 5px;
+            padding-right: 5px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            white-space: nowrap;
+            &_red {
+                background-color: #8b0000;
+                color: #fff;
+                transition: background-color .5s ease;
+                &:hover {
+                    background-color: #ff0000;
+                    cursor: pointer;
+                }
             }
         }
     }
-}
-
-.contacts {
-    margin-left: auto;
-    &__avatar {
-        display: inline-block;
-        vertical-align: middle;
-        width: 70px;
-        height: auto;
-        margin-right: 15px;
-        border-radius: 50%;
-    }
-    &__text {
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 1.2rem;
-        span {
+    
+    .contacts {
+        margin-left: auto;
+        &__avatar {
             display: inline-block;
-            width: calc(100% - 271px);
-            color: #fff;
+            vertical-align: middle;
+            width: 70px;
+            height: auto;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+        &__text {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.2rem;
+            span {
+                display: inline-block;
+                width: calc(100% - 271px);
+                color: #fff;
+            }
+        }
+        &__skype {
+            margin-bottom: 8px;
+        }
+        &__skype-link {
+            margin-left: 15px;
+            &:hover {
+                color: #276afc;
+            }
+        }
+        &__email-link {
+            margin-left: 15px;
+            &:hover {
+                color: #276afc;
+            }
         }
     }
-    &__skype {
-        margin-bottom: 8px;
-    }
-    &__skype-link {
-        margin-left: 15px;
-        &:hover {
-            color: #276afc;
+    /* media queries */
+    
+    @media (min-width: 1441px) {
+        body {
+            font-size: 2.5rem;
+        }
+        .intro {
+            &__greeting {
+                font-size: 2.8rem;
+            }
+        }
+        .contacts {
+            &__text {
+                font-size: 1.7rem;
+                span {
+                    width: calc(100% - 388px);
+                }
+            }
+            &__email-link {
+                margin-left: 25px;
+            }
+            &__skype-link {
+                margin-left: 25px;
+            }
         }
     }
-    &__email-link {
-        margin-left: 15px;
-        &:hover {
-            color: #276afc;
+    
+    @media (max-width: 1200px) {
+        .intro {
+            &__caption {
+                line-height: 50px;
+            }
+            &__action {
+                line-height: 50px;
+            }
         }
     }
-}
-
-
-/* media queries */
-
-@media only screen and (max-width: 1200px) {}
-
-@media only screen and (max-width: 650px) {}
-
-@media only screen and (max-width: 450px) {}
-
-@media only screen and (max-width: 350px) {}
+    
+    @media (max-width: 650px) {
+        body {
+            width: calc(100% - 40px);
+            font-size: 1.5rem;
+        }
+        .intro {
+            &__greeting {
+                font-size: 1.8rem;
+            }
+            &__caption {
+                line-height: 40px;
+            }
+            &__action {
+                line-height: 40px;
+            }
+        }
+        .contacts {
+            margin: 0 auto;
+            text-align: center;
+            &__avatar {
+                display: block;
+                margin: 0 auto 20px auto;
+            }
+            &__text {
+                font-size: 1rem;
+                span {
+                    width: calc(100% - 255px);
+                }
+            }
+            &__email-link {
+                margin-left: 25px;
+            }
+            &__skype-link {
+                margin-left: 25px;
+            }
+        }
+    }
